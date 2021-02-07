@@ -72,22 +72,49 @@ header {
 /* Table ========================================== */
 #dataTable {
     width: 100%;   /* Pega 100% do espaço do container que está dentro */
-    border-spacing: 0 0.5rem;
+    border-spacing: 0 0.5rem; /* O que fez juntar os itens da tabela e separar horizontalmente */
+    color: #969cb3;
 }
-table th {
+
+table thead tr th:first-child, table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem; 
+} /* Aqui, foi selecionada para a tabela, somente arredondar à esquerda a primeira seleção de cada linha */
+
+table thead th {
     background: white;
     font-weight: normal;
-    color: #969cb3;
     padding: 1rem 2rem;
     text-align: left;
 }
-table td {
-    background: white;
+
+table tr {
+    opacity: 0.7;
+}
+table tbody tr:hover {
+    opacity: 1
 }
 
+table tbody td {
+    background: white;
+    padding: 1rem 2rem;
+}
 
+td.deion {
+    color: var(--dark-blue)
+}
+
+td.incomes {
+    color: #12a454;
+}
+
+td.expense{
+    color: #e92929;
+}
 
 /* Footer ========================================== */
 footer {
     text-align: center;
+    padding: 4rem 0 0 2rem;
+    color: var(--dark-blue);
+    opacity: 0.6;
 }
