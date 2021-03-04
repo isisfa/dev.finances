@@ -5,68 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/total.svg" type="image/x-icon">
     <title>dev.finance$</title>
 
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1 id="logo">dev.finance$</h1>
+        <img src="assets/logo.svg" alt="dev finance logo">
     </header>
 
     <main class="container">
         <section id="balance">
-            <h2>Balanço</h2>
+            <h2 class="sr-only">Balance</h2>
 
             <div class="card">
-                <h3>Entradas</h3>
-                <p>R$ 5.000,00</p>
+                <h3>
+                    <span>Incomes</span>
+                    <img src="assets/income.svg" alt="Incomes image">
+                </h3>
+                <p>€ 5.000,00</p>
             </div>
 
             <div class="card">
-                <h3>Saídas</h3>
-                <p>R$ 2.000,00</p>
+                <h3>
+                    <span>Expenses</span>
+                    <img src="assets/expense.svg" alt="Expenses image">
+                </h3>
+                <p>€ 2.000,00</p>
             </div>
 
             <div class="card total">
-                <h3>Total</h3>
-                <p>R$ 3.000,00</p>
+                <h3>
+                    <span>Total</span>
+                    <img src="assets/total.svg" alt="Total image">
+                </h3>
+                <p>€ 3.000,00</p>
             </div>
         </section>
 
         <section id="transaction">
-            <h2>Transações</h2>
-            
+            <h2 class="sr-only">Transactions</h2>
+
+            <a href="#" class="button new">+ New Transaction</a>
+
             <table id="dataTable">
                 <thead>
                     <tr>
                         <th>Descrição</th>
                         <th>Valor</th>
                         <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="deion">Luz</td>
-                        <td income="expense">- R$ 500,00</td>
+                        <td class="deion">Energy</td>
+                        <td income="expense">- € 500,00</td>
                         <td class="date">23/01/2021</td>
+                        <td>
+                            <img src="assets/minus.svg" alt="">
+                        </td>
                     </tr>
                     <tr>
-                        <td class="deion">Criação website</td>
-                        <td class="incomes">R$ 5.000,00</td>
+                        <td class="deion">Website criation</td>
+                        <td class="incomes">€ 5.000,00</td>
                         <td class="date">23/01/2021</td>
+                        <td>
+                            <img src="assets/minus.svg" alt="">
+                        </td>
                     </tr>
                     <tr>
                         <td class="deion">Internet</td>
-                        <td class="expense">- R$ 200,00</td>
+                        <td class="expense">- € 200,00</td>
                         <td class="date">23/01/2021</td>
+                        <td>
+                            <img src="assets/minus.svg" alt="">
+                        </td>
                     </tr>
                 </tbody>
             </table>
-            
+
         </section>
     </main>
 
