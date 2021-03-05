@@ -3,6 +3,7 @@
   --dark-blue: #363f5f;
   --green: #49aa26;
   --light-green: #3dd705;
+  --red: #e92929;
 }
 * { /*Zera as pré definições do user agent*/
   margin: 0;
@@ -33,6 +34,7 @@ body {
   margin: auto;
 }
 
+
 /* Header ================================ */
 header {
   background: #244624;
@@ -44,6 +46,7 @@ header h1#logo {
   font-weight: 100;
 }
 
+
 /* Titles================================= */
 h2 {
   margin-top: 3.2rem;
@@ -52,18 +55,46 @@ h2 {
   font-weight: normal;
 }
 
+
 /* Links and Buttons====================== */
 a {
     color: #49aa26;
     text-decoration: none;
 }
 a:hover {
-    color: #3dd705;
+    color: var(--light-green);
+}
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background: var(--green);
+  padding: 0;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--light-green);
 }
 a.button.new {
     display: inline-block;
     margin-bottom: .8rem;
 }
+.button.cancel {
+  color: var(--red);
+  border: 2px var(--red) solid;
+  border-radius: 0.25rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+.button.cancel:hover {
+  opacity: 1;
+}
+
 
 /* Balance =============================== */
 #balance {
@@ -73,6 +104,7 @@ a.button.new {
   color: #fff;
   margin-top: 0;
 }
+
 
 /* Cards ================================= */
 .card {
@@ -99,7 +131,13 @@ a.button.new {
   color: #fff;
 }
 
+
 /* Table ================================= */
+#transaction {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
 #dataTable {
   width: 100%;
   border-spacing: 0 0.5rem; /* Separação entre linhas da tabela */
@@ -139,6 +177,61 @@ td.expense {
   color: #e92929;
 }
 
+
+/* Modal ================================ */
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Só ativará com o JS em active*/
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  background: #f0f2f5;
+  padding: 2.4rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+
+/* Form ================================== */
+#form {
+  max-width: 500px;
+}
+#form h2 {
+  margin-top: 0;
+}
+input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+.input-group {
+  margin-top: 0.8rem;
+}
+.input-group small {
+  opacity: 0.4;
+}
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-group.actions .button, .input-group.actions button {
+  width: 48%;
+}
+
 /* Footer ================================ */
 footer {
   text-align: center;
@@ -146,6 +239,7 @@ footer {
   color: var(--dark-blue);
   opacity: 0.6;
 }
+
 
 /* Responsive ============================ */
 @media (min-width: 800px) {
