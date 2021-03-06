@@ -191,6 +191,7 @@ td.expense {
   /* Só ativará com o JS em active*/
   opacity: 0;
   visibility: hidden;
+  z-index: 1;
 }
 .modal-overlay.active {
   opacity: 1;
@@ -201,6 +202,8 @@ td.expense {
   padding: 2.4rem;
   width: 90%;
   max-width: 500px;
+  position: relative;
+  z-index: 999;
 }
 
 
