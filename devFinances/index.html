@@ -30,7 +30,7 @@
                     <span>Incomes</span>
                     <img src="assets/income.svg" alt="Incomes image">
                 </h3>
-                <p>€ 5.000,00</p>
+                <p id="incomeDisplay">€ 5.000,00</p>
             </div>
 
             <div class="card">
@@ -38,7 +38,7 @@
                     <span>Expenses</span>
                     <img src="assets/expense.svg" alt="Expenses image">
                 </h3>
-                <p>€ 2.000,00</p>
+                <p id="expenseDisplay">€ 2.000,00</p>
             </div>
 
             <div class="card total">
@@ -46,7 +46,7 @@
                     <span>Total</span>
                     <img src="assets/total.svg" alt="Total image">
                 </h3>
-                <p>€ 3.000,00</p>
+                <p id="totalDisplay">€ 3.000,00</p>
             </div>
         </section>
 
@@ -55,7 +55,7 @@
 
             <a href="#" class="button new" onclick="Modal.open()">+ New Transaction</a>
 
-            <table id="dataTable">
+            <table id="data-table">
                 <thead>
                     <tr>
                         <th>Description</th>
@@ -65,30 +65,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="deion">Energy</td>
-                        <td class="expense">- € 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="assets/minus.svg" alt="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="deion">Website criation</td>
-                        <td class="incomes">€ 5.000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="assets/minus.svg" alt="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="deion">Internet</td>
-                        <td class="expense">- € 200,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="assets/minus.svg" alt="">
-                        </td>
-                    </tr>
                 </tbody>
             </table>
 
