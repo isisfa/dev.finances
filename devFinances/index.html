@@ -30,7 +30,7 @@
                     <span>Incomes</span>
                     <img src="assets/income.svg" alt="Incomes image">
                 </h3>
-                <p id="incomeDisplay">€ 5.000,00</p>
+                <p id="incomeDisplay">€ 0,00</p>
             </div>
 
             <div class="card">
@@ -38,7 +38,7 @@
                     <span>Expenses</span>
                     <img src="assets/expense.svg" alt="Expenses image">
                 </h3>
-                <p id="expenseDisplay">€ 2.000,00</p>
+                <p id="expenseDisplay">€ 0,00</p>
             </div>
 
             <div class="card total">
@@ -46,7 +46,7 @@
                     <span>Total</span>
                     <img src="assets/total.svg" alt="Total image">
                 </h3>
-                <p id="totalDisplay">€ 3.000,00</p>
+                <p id="totalDisplay">€ 0,00</p>
             </div>
         </section>
 
@@ -75,14 +75,14 @@
         <div class="modal">
             <div id="form">
                 <h2>New Transaction</h2>
-                <form action="">
+                <form action="" onsubmit= "Form.submit(event)">
                     <div class="input-group">
                         <label for="description" class="sr-only">Description</label>
                         <input type="text" id="description" name="description" placeholder="Description">
                     </div>
                     <div class="input-group">
                         <label for="amount" class="sr-only">Description</label>
-                        <input type="number" step="0.1" id="amount" name="amount" placeholder="Amount">
+                        <input type="number" step="0.01" id="amount" name="amount" placeholder="Amount">
                         <small class="help">Use the - (negative) sign for expenses and , (comma) for decimal places </small>
                     </div>
                     <div class="input-group">
