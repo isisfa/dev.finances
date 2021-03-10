@@ -44,26 +44,26 @@ const Transaction = {
     let income = 0;
     //pegar todas as transacoes
     //para cada transacao incrementar a soma
-    Transaction.all.forEach(function (transaction) {
-    //se for maior que zero
-    if( transaction.amount > 0 ) {
-    //somar a uma variavel e retornar uma variavel
+    Transaction.all.forEach(transaction => {
+      //se for maior que zero
+      if( transaction.amount > 0 ) {
+      //somar a uma variavel e retornar uma variavel
         income += transaction.amount;
-    }
+      }
     })
     return income;
   },
 
   expenses() {
     let expense = 0;
-    //pegar todas as transacoes
-    //para cada transacao
-    Transaction.all.forEach(function (transaction) {
-    //se for menor que zero
-    if( transaction.amount < 0 ) {
-    //diminuir de uma variavel e retornar uma variavel
+      //pegar todas as transacoes
+      //para cada transacao
+      Transaction.all.forEach(transaction => {
+      //se for menor que zero
+      if( transaction.amount < 0 ) {
+      //diminuir de uma variavel e retornar uma variavel
         expense += transaction.amount;
-    }
+      }
     })
     return expense;
   },
@@ -78,14 +78,15 @@ const DOM = {
   
   
   addTransaction(transaction, index) {
-    const tr = document.createElement("tr");
+    const tr = document.createElement("tr")
     tr.innerHTML = DOM.innerHTMLTransaction(transaction, index)
     tr.dataset.index = index
 
     DOM.transactionsContainer.appendChild(tr)
   },
+
   //Substituir os dados do HTML para JS
-  innerHTMLTransaction(transaction,index) {
+  innerHTMLTransaction(transaction, index) {
     const CSSclass = transaction.amount > 0 ? "income" : "expense"
 
     const amount = Utils.formatCurrency(transaction.amount)
@@ -97,6 +98,7 @@ const DOM = {
         <td>
             <img onclick="Transaction.remove(${index})" src="assets/minus.svg" alt="">
         </td>`
+
     return html
   },
 
@@ -119,6 +121,7 @@ const DOM = {
 const Utils = {
   formatAmount(value) {
     value = Number(value.replace(/\,\./g, "")) * 100
+
     return value
   },
 
@@ -149,6 +152,7 @@ const Form = {
   description: document.querySelector('input#description'),
   amount: document.querySelector('input#amount'),
   date: document.querySelector('input#date'),
+
   getValues() {
     return {
       description: Form.description.value,
@@ -216,9 +220,7 @@ const Form = {
 const App = {
   init() {
       //selecionar todos os objetos da tabela
-    Transaction.all.forEach(function (transaction, index) {
-      DOM.addTransaction(transaction, index)
-    })
+    Transaction.all.forEach (DOM.addTransaction)
 
     DOM.updateBalance()
 
