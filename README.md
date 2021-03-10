@@ -1,6 +1,8 @@
 ### dev.finance$
+#### Project with [Mayk Brito](https://github.com/maykbrito) mentoring of [Rocketseat](https://rocketseat.com.br/), at [discover marathon](https://www.youtube.com/watch?v=NlDr6JX3VvA&ab_channel=MaykBrito) course.
 ***
-Project of a financial control system, with entry and withdrawal of amounts, sum of income and expenses and see the calculation in real time.
+
+Financial control system, with entry and withdrawal of amounts, sum of income and expenses and see the calculation in real time.
 Using:
 - _html, css and javascript_.
 
